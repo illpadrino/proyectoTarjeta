@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Tarjeta</title>
+</head>
+<body>
+
+    <div class="container">
+        <section class="card" id="card">
+            <div class="frontCard">
+                <div class="logo">
+                    <!-- <img src="./img/visa.png" alt=""> -->
+                </div>
+                <img src="./img/chip-tarjeta.png" class="chip" alt="">
+                <div class="data">
+                    <div class="group" id="cardNumber">
+                        <p class="label">Card Number</p>
+                        <p class="number">#### #### #### ####</p>
+                    </div>
+                    <div class="flexbox">
+                        <div class="group" id="number">
+                            <p class="label">Card Name</p>
+                            <p class="name">Luis Padrino</p>
+                        </div>
+
+                        <div class="group" id="expiringDate">
+                            <p class="label">Expiration</p>
+                            <p class="expiration"><span class="month">MM</span> / <span class="year">AA</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="backCard">
+                <div class="magneticBar"></div>
+                <div class="data">
+                    <div class="group" id="sign">
+                        <p class="label">Firma</p>
+                        <div class="sign"><p id="signature">Luis Padrino</p></div>
+                    </div>
+                    <div class="group" id="ccv">
+                        <P class="label">CCV</P>
+                        <P class="ccv"></P>
+                    </div>
+                </div>
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, cum.</p>
+                <a href="#" class="linkBank">www.godfatherbank.com</a>
+            </div>  
+        </section>
+
+        <!-- btn Container  -->
+
+        <div class="btnContainer">
+
+            <button class="btnOpenForm" id="btnOpenForm">
+                <i class="fas fa-plus"></i>
+            </button>
+            
+        </div>
+
+        <!-- form -->
+
+        <form action="" class="form" id="form">
+            <div class="group">
+                <label for="numberInput">Número Tarjeta</label>
+                <input type="text" name="" id="numberInput" maxlength="19" autocomplete="off">
+            </div>
+
+            <div class="group">
+                <label for="nameInput">Nombre</label>
+                <input type="text" name="" id="nameInput" maxlength="19" autocomplete="off">
+            </div>
+
+            <div class="flexbox">
+                <div class="group expiration">
+                    <label for="monthSelec">Expira</label>
+
+                    <div class="flexbox">
+
+                            <div class="groupSelec">
+                                <select name="year" id="yearSelec">
+                                    <option disabled selected>Año</option>
+                                </select>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+
+                            
+                            <div class="groupSelec">
+                                <select name="month" id="monthSelec">
+                                    <option disabled selected>Mes</option>
+                                </select>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                    
+                    </div>
+
+                </div>
+
+                            <div class="group ccv">
+                                <label for="ccvInput">CCV</label>
+                                <input type="text" id="ccvInput" maxlength="3">
+                            </div>
+
+            </div>
+
+            <button type="submit" class="btnSend">Enviar</button>
+
+        </form>
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

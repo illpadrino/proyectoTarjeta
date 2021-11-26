@@ -1,0 +1,296 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    
+    font-family: sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* card style */
+
+.card{
+    width: 100%;
+    max-width: 490px;
+    position: relative;
+    color: white;
+    transition: .3s ease all;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.card.active{
+    transform: rotateY(180deg);
+}
+
+.card > div{
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+}
+
+/* frontCard style */
+
+.frontCard{
+    width: 100%;
+    background-color: blueviolet;
+
+}
+
+.logo{
+    text-align: right;
+    min-height: 50px;
+}
+
+.logo img{
+    width: 100%;
+    max-width: 80px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frontCard .chip{
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+.frontCard .group .label{
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #b0b8c0
+}
+
+.frontCard .group .number,
+.frontCard .group .name,
+.frontCard .group .expiration{
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.frontCard .flexbox{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* backCard style */
+
+.backCard{
+    background-color: blueviolet;
+    position: absolute;
+    top: 0; 
+     transform: rotateY(180deg); 
+    backface-visibility: hidden;  
+}
+
+.backCard .magneticBar{
+    height: 40px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    
+}
+
+.backCard .data{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.backCard .data p{
+    margin-bottom: 5px;
+}
+
+.backCard .data #sign{
+    width: 70%;
+
+}
+
+.backCard .data #sign .sign{
+    height: 40px;
+    background:repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px)
+}
+
+.backCard .data #sign .sign p{
+    line-height: 40px;
+    font-family: cursive;
+    color: black;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.backCard .data #ccv{
+    width: 20%;
+}
+
+.backCard .data #ccv .ccv{
+    height: 40px; 
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.backCard .lorem{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.backCard .linkBank{
+    font-size: 14px;
+    color: white;
+}
+
+
+/* btn container form */
+
+.btnContainer .btnOpenForm{
+    width: 50px;
+    height: 50px;
+    line-height: 20px;
+    background-color: #2364d2;
+    color: white;
+    position: relative;
+    top: -25px;
+    z-index: 3;
+    border-radius: 100%;
+    box-shadow: -5px 4px 8px rgba(29, 36, 65, 0.4);
+    padding: 5px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btnContainer .btnOpenForm:hover{
+    background-color: #1850b1;
+    
+}
+
+.btnContainer .btnOpenForm.active{
+    transform: rotate(45deg);
+}
+
+
+/* form */
+
+.form{
+    background-color: white;
+    width: 100%;
+    padding: 150px 30px 30px 30px;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.3s ease-out ;
+}
+
+.form.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.form label{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form input,
+.form select,
+.btnSend{
+    border: solid 2px #ced6e0 ;
+    font-size: 18px;
+    height: 40px;
+    width: 100%;
+    padding: 5px 12px;
+    transition: .3s ease all;
+    border-radius: 5px;
+}
+
+.form input:hover,
+.form select:hover{
+    border: 2px solid #93bded;
+}
+
+.form input:focus,
+.form select:focus{
+    outline: none;
+    box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+}
+
+.form input{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.form .flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form .expiration{
+    width: 100%;
+}
+
+.form .ccv{
+    min-width: 100px;
+}
+
+.form .groupSelec{
+    width: 100%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.form select{
+    -webkit-appearance: none;
+}
+
+.form .groupSelec i{
+    position: absolute;
+    color: #ced6e0;
+    top: 15px;
+    right: 15px;
+    transition: .3s all ease;
+}
+
+.form .groupSelec:hover i{
+    color: #93bfed;
+}
+
+.form .btnSend{
+    border: none;
+    padding: 10px;
+    font-size: 22px;
+    color: white;
+    background-color: #2364d2;
+    box-shadow: 2px 2px 10px 0px rgba(0,85, 212, 0.4,);
+    cursor: pointer;
+}
+
+.form .btnSend:hover{
+    background-color: #1850b1;
+}
